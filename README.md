@@ -18,7 +18,17 @@ This is a fundamental networking lab focused on configuring a Cisco Router to in
 - **Status:** All interfaces are in `up/up` state.
 
 ## 📁 Repository Contents
-- `01_topology.png`
-- `02_router_config.png`
-- `03_pc_ip_setup.png`
-- `04_ping_test.png`
+- `01_network_topology.png`
+- `02_switch_vlan_brief.png`
+- `03_interface_switch.png`
+- `04_interface_trunk_switch.png`
+- `05_router_interface_confi.png`
+- `06_pc1_ipconfiguration.png`
+- `07_pc2_ipconfiguration.png`
+- `08_pc3_ipconfiguration.png`
+- `09_connectivity_ping_test.png`
+
+
+
+- 
+
