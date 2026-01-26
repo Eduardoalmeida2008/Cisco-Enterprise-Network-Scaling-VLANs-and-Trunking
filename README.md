@@ -1,34 +1,44 @@
-# Basic Static Routing - Cisco Packet Tracer
+# Standard IP Routing Infrastructure 🌐
 
-## 📌 Project Overview
-This is a fundamental networking lab focused on configuring a Cisco Router to inter-connect two distinct local area networks (LANs). The goal is to establish end-to-end connectivity between two workstations on different subnets.
+## 📌 Overview
+This project establishes a fundamental Star Topology network, focusing on the essential principles of **IP Routing** and **Gateway Configuration**. By connecting multiple end-devices through a switch to a central router, the lab demonstrates how traffic is directed from a local area network (LAN) to its default exit point.
 
-## 🏗️ Topology
-- **Router:** 1x Cisco 1941 (serving as the gateway).
-- **Switch:** 1x Cisco 2960.
-- **Hosts:** 2x Generic PCs.
+> **Status:** Completed & Verified ✅
 
-## 🛠️ Configuration Highlights
-- **Interface Assignment:** Configuring IP addresses on `G0/0` and `G0/1`.
-- **Gateway Setup:** Ensuring both PCs point to the correct router interfaces.
-- **Verification:** Using `show ip interface brief` to check the status of physical links.
+## 📐 Network Topology
+The design follows a hierarchical star model for clear traffic management:
+- **Central Router:** Functions as the Default Gateway.
+- **Access Switch:** Provides physical layer connectivity for the workstations.
+- **End Devices:** 3 PCs configured with distinct static IP addresses within the same subnet.
 
-## ✅ Validation
-- **Connectivity:** Successful ping between PC0 and PC1.
-- **Status:** All interfaces are in `up/up` state.
+![Network Topology](01_network_Topology.png)
 
-## 📁 Repository Contents
-- `01_network_topology.png`
-- `02_switch_vlan_brief.png`
-- `03_interface_switch.png`
-- `04_interface_trunk_switch.png`
-- `05_router_interface_confi.png`
-- `06_pc1_ipconfiguration.png`
-- `07_pc2_ipconfiguration.png`
-- `08_pc3_ipconfiguration.png`
-- `09_connectivity_ping_test.png`
+## 🛠️ Technical Specifications
+- **Hardware:** Cisco Router (ISR), Cisco Catalyst Switch.
+- **Protocols:** IP (IPv4), ICMP (Ping).
+- **Configuration Type:** Static Addressing.
 
+## ⚙️ Configuration Workflow
 
+### 1. Interface Setup
+The Router interface connected to the switch was activated and assigned the first usable IP of the subnet, acting as the **Default Gateway** for all hosts.
 
-- 
+### 2. Host Configuration
+Each PC was manually configured with:
+- **IP Address:** Unique identifier within the subnet.
+- **Subnet Mask:** Defining the network boundaries.
+- **Default Gateway:** Pointing to the Router's interface IP.
 
+## 🧪 Connectivity Results
+The implementation was verified using the **Ping (ICMP)** command to ensure stable communication between all nodes and the gateway.
+
+| From | To | Result |
+| :--- | :--- | :--- |
+| PC-0 | Router (Gateway) | Success (0% loss) |
+| PC-0 | PC-2 | Success (0% loss) |
+
+![Ping Verification](09_connectivity_ping_test.png)
+
+---
+**Developed by:** Eduardo Almeida  
+*Building solid foundations in Network Engineering.*
